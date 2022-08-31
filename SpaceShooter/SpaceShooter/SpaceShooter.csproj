@@ -24,6 +24,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <LangVersion>8.0</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -33,6 +34,7 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <LangVersion>8.0</LangVersion>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -55,6 +57,29 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Exceptions\StoneHitException.cs" />
+    <Compile Include="Interfaces\IDrawController.cs" />
+    <Compile Include="Object\PowerUP\DefaultPowerUP.cs" />
+    <Compile Include="Object\PowerUP\HealPowerUP.cs" />
+    <Compile Include="Object\PowerUP\ShieldPowerUP.cs" />
+    <Compile Include="Object\PowerUP\SpeedPowerUP.cs" />
+    <Compile Include="Object\PowerUP\StrengthPowerUP.cs" />
+    <Compile Include="Object\Projectile\BurstProjectile.cs" />
+    <Compile Include="Object\Projectile\DefaultProjectile.cs" />
+    <Compile Include="Object\Projectile\LaserProjectile.cs" />
+    <Compile Include="Object\Projectile\NormalProjectile.cs" />
+    <Compile Include="Object\Projectile\FireProjectile.cs" />
+    <Compile Include="Object\SpaceShip\DefaultShip.cs" />
+    <Compile Include="Object\SpaceShip\EnemyShip.cs" />
+    <Compile Include="Object\SpaceShip\PlayerShip.cs" />
+    <Compile Include="Object\SpaceStone\DefaultStone.cs" />
+    <Compile Include="Object\SpaceStone\Type3Stone.cs" />
+    <Compile Include="Object\SpaceStone\Type1Stone.cs" />
+    <Compile Include="Object\SpaceStone\Type2Stone.cs" />
+    <Compile Include="Object\Star\DefaultStar.cs" />
+    <Compile Include="Object\Star\NormalStar.cs" />
+    <Compile Include="Object\Star\SuperStar.cs" />
+    <Compile Include="Utils\GameManager.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -69,6 +94,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Object\DefaultObject.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -93,6 +119,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Handler\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

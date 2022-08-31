@@ -13,6 +13,11 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
+using SpaceShooter.Object.SpaceShip;
+using SpaceShooter.Exceptions;
+using SpaceShooter.Utils;
+
+
 namespace SpaceShooter
 {
     /// <summary>
@@ -23,6 +28,25 @@ namespace SpaceShooter
         public MainWindow()
         {
             InitializeComponent();
+
+            PlayerShip ps = new PlayerShip();
+            EnemyShip es = new EnemyShip();
+
         }
-    }
+
+        
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                throw new StoneHitException("Hat ja SUPER funktioniert ╰（‵□′）╯");
+            }
+            catch (StoneHitException ex)
+            {
+                MessageBox.Show(ex.Message);
+                StartBox.Content += "\n" + ex.Message;
+            }
+        }
+    } 
 }
