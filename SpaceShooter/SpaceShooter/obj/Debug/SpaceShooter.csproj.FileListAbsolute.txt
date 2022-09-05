@@ -13,3 +13,7 @@ C:\Users\Fabian\source\repos\GitHub\SpaceShooter\SpaceShooter\SpaceShooter\obj\D
 C:\Users\Fabian\source\repos\GitHub\SpaceShooter\SpaceShooter\SpaceShooter\obj\Debug\SpaceShooter.csproj.CoreCompileInputs.cache
 C:\Users\Fabian\source\repos\GitHub\SpaceShooter\SpaceShooter\SpaceShooter\obj\Debug\SpaceShooter.exe
 C:\Users\Fabian\source\repos\GitHub\SpaceShooter\SpaceShooter\SpaceShooter\obj\Debug\SpaceShooter.pdb
+C:\Users\Fabian\source\repos\GitHub\SpaceShooter\SpaceShooter\SpaceShooter\obj\Debug\StartUPWindow.g.cs
+C:\Users\Fabian\source\repos\GitHub\SpaceShooter\SpaceShooter\SpaceShooter\obj\Debug\StartUPWindow.baml
+C:\Users\Fabian\source\repos\GitHub\SpaceShooter\SpaceShooter\SpaceShooter\obj\Debug\GameWindow.g.cs
+C:\Users\Fabian\source\repos\GitHub\SpaceShooter\SpaceShooter\SpaceShooter\obj\Debug\GameWindow.baml

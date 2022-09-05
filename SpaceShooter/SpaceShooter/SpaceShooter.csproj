@@ -58,6 +58,9 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Exceptions\StoneHitException.cs" />
+    <Compile Include="GameWindow.xaml.cs">
+      <DependentUpon>GameWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Interfaces\IDrawController.cs" />
     <Compile Include="Object\PowerUP\DefaultPowerUP.cs" />
     <Compile Include="Object\PowerUP\HealPowerUP.cs" />
@@ -79,7 +82,14 @@
     <Compile Include="Object\Star\DefaultStar.cs" />
     <Compile Include="Object\Star\NormalStar.cs" />
     <Compile Include="Object\Star\SuperStar.cs" />
+    <Compile Include="StartUPWindow.xaml.cs">
+      <DependentUpon>StartUPWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Utils\GameManager.cs" />
+    <Page Include="GameWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -92,6 +102,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="StartUPWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Object\DefaultObject.cs" />
@@ -122,6 +136,14 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Handler\" />
+    <Folder Include="sounds\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\galaxie.jpg" />
+    <Resource Include="images\playerShip.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="nottingham-university-forscher-wissenschaftler-alien-ausserirdische-zivilisation-weltall-milchstrasse.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

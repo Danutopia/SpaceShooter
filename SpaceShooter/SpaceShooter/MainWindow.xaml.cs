@@ -45,8 +45,19 @@ namespace SpaceShooter
             catch (StoneHitException ex)
             {
                 MessageBox.Show(ex.Message);
-                StartBox.Content += "\n" + ex.Message;
             }
+        }
+
+        private void Image_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            StartUPWindow supw = new StartUPWindow();
+            supw.Show();
+            this.Close();
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            Application.Current.Shutdown();
         }
     } 
 }
