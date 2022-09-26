@@ -14,12 +14,14 @@ namespace SpaceShooter.Utils
 {
     public static class GameManager
     {
-        public static Boolean isRunning = false;
-        public static Boolean gameOver = false;
 
-        public static int points = 0;
-        public static int difficulty = 250;
+        public static Boolean isRunning { get; set; } = false;
+        public static Boolean gameOver { get; set; } = false;
+        public static int points { get; set; } = 0;
+        public static int difficulty { get; set; } = 250;
 
+
+        public static String direction { get; set; } = "";
 
         //PowerUP Container
         public static List<HealPowerUP> healPowerUPContainer = new List<HealPowerUP>();

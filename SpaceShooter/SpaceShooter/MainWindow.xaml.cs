@@ -29,27 +29,13 @@ namespace SpaceShooter
         {
             InitializeComponent();
 
-            PlayerShip ps = new PlayerShip();
-            EnemyShip es = new EnemyShip();
-
         }
 
-        
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            try
-            {
-                throw new StoneHitException("Hat ja SUPER funktioniert ╰（‵□′）╯");
-            }
-            catch (StoneHitException ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-        }
+      
 
         private void Image_MouseDown(object sender, MouseButtonEventArgs e)
         {
+
             StartUPWindow supw = new StartUPWindow();
             supw.Show();
             this.Close();

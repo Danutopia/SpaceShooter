@@ -11,17 +11,24 @@
         WindowStartupLocation="CenterScreen"
         Background="LightGray"
         
-        Title="Ingame" Height="700" Width="1100">
+        Title="Ingame" Height="700" Width="1100" KeyDown="window_KeyDown">
     <Grid>
-        <Image Source="nottingham-university-forscher-wissenschaftler-alien-ausserirdische-zivilisation-weltall-milchstrasse.jpg" Stretch="Fill" RenderTransformOrigin="0.5,0.5"></Image>
-        <Border BorderBrush="Black" Background="Black" BorderThickness="5" HorizontalAlignment="Left" Height="62" VerticalAlignment="Top" Width="1100"/>
-        <Label Foreground="White" Content="Leben: NULL" HorizontalAlignment="Left" Margin="194,11,0,0" VerticalAlignment="Top" Height="41" Width="146" FontSize="22" FontWeight="Bold"/>
-        <Label Foreground="White" Content="Punkte: NULL" HorizontalAlignment="Left" Margin="490,10,0,0" VerticalAlignment="Top" Height="41" Width="160" FontSize="22" FontWeight="Bold"/>
-        <Label Foreground="White" Content="Speed: NULL" HorizontalAlignment="Left" Margin="808,9,0,0" VerticalAlignment="Top" Height="42" Width="160" FontSize="22" FontWeight="Bold"/>
-        <Border BorderBrush="Black" Background="Black" BorderThickness="5" HorizontalAlignment="Left" Height="60" VerticalAlignment="Top" Width="1100" Margin="0,640,0,0"/>
-        <Label Foreground="White" Content="Fähigkeiten: " HorizontalAlignment="Left" Margin="68,648,0,0" VerticalAlignment="Top" Height="42" Width="146" FontSize="22" FontWeight="Bold"/>
-        <Canvas Name="spielfeld" HorizontalAlignment="Left" Height="568" Margin="0,67,0,0" VerticalAlignment="Top" Width="1100"/>
-        <Button Background="Black" Foreground="White" Content="Schließen" HorizontalAlignment="Left" Margin="978,652,0,0" VerticalAlignment="Top" Width="112" Height="38" Click="Button_Click_1" FontSize="18" FontWeight="Bold"/>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="174*"/>
+        </Grid.RowDefinitions>
+        <Image Source="nottingham-university-forscher-wissenschaftler-alien-ausserirdische-zivilisation-weltall-milchstrasse.jpg" Stretch="Fill" RenderTransformOrigin="0.5,0.5" Grid.RowSpan="2"/>
+        <Border BorderBrush="Black" Background="Black" BorderThickness="5" HorizontalAlignment="Left" Height="62" VerticalAlignment="Top" Width="1100" Grid.RowSpan="2"/>
+        <Label Foreground="White" Content="Leben: NULL" HorizontalAlignment="Left" Margin="194,7,0,0" VerticalAlignment="Top" Height="41" Width="146" FontSize="22" FontWeight="Bold" Grid.Row="1"/>
+        <Label Foreground="White" Content="Punkte: NULL" HorizontalAlignment="Left" Margin="490,6,0,0" VerticalAlignment="Top" Height="41" Width="160" FontSize="22" FontWeight="Bold" Grid.Row="1"/>
+        <Label Foreground="White" Content="Speed: NULL" HorizontalAlignment="Left" Margin="808,5,0,0" VerticalAlignment="Top" Height="42" Width="160" FontSize="22" FontWeight="Bold" Grid.Row="1"/>
+        <Border BorderBrush="Black" Background="Black" BorderThickness="5" HorizontalAlignment="Left" Height="60" VerticalAlignment="Top" Width="1100" Margin="0,636,0,0" Grid.Row="1"/>
+        <Label Foreground="White" Content="Fähigkeiten: " HorizontalAlignment="Left" Margin="68,644,0,0" VerticalAlignment="Top" Height="42" Width="146" FontSize="22" FontWeight="Bold" Grid.Row="1"/>
+        <Canvas Name="spielfeld" HorizontalAlignment="Left" Height="568" Margin="0,63,0,0" VerticalAlignment="Top" Width="1100" Grid.Row="1"/>
+
+
+
+        <Button Background="Black" Foreground="White" Content="Schließen" HorizontalAlignment="Left" Margin="978,648,0,0" VerticalAlignment="Top" Width="112" Height="38" Click="Button_Click_1" FontSize="18" FontWeight="Bold" Grid.Row="1"/>
 
     </Grid>
 </Window>

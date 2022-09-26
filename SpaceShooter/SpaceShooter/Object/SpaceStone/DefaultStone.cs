@@ -8,5 +8,11 @@ namespace SpaceShooter.Object.SpaceStone
 {
     public class DefaultStone
     {
+        public int default_width { get; set; } = 50;
+        public int default_height { get; set; } = 50;
+
+        public int default_pos_x { get; set; } = 200;
+        public int default_pos_y { get; set; } = 200;
+
     }
 }

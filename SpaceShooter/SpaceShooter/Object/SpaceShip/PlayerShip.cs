@@ -15,17 +15,34 @@ namespace SpaceShooter.Object.SpaceShip
 {
     public class PlayerShip : DefaultShip, IDrawController
     {
+
+        public PlayerShip()
+        {
+            object_height = default_height;
+            object_width = default_width;
+        }
+        public int object_width { get; set; }
+        public int object_height { get; set; }
+
+        public int pos_x { get; set; } = 100;
+        public int pos_y { get; set; } = 100;
+
         public void Draw(Canvas feld)
         {
+                Rectangle blueRectangle = new Rectangle();
+                blueRectangle.Height = object_height;
+                blueRectangle.Width = object_width;
 
-            BitmapImage theImage = new BitmapImage
-                (new Uri("images/playerShip.ico", UriKind.Relative));
+                ImageBrush imgBrush = new ImageBrush();
 
-            ImageBrush myImageBrush = new ImageBrush(theImage);
+                imgBrush.ImageSource = new BitmapImage(new Uri("file://C:/Users/fabian/source/repos/SpaceShooter/SpaceShooter/SpaceShooter/images/playerShip.ico"));
+                blueRectangle.Fill = imgBrush;
 
-            rectangle.Fill = myImageBrush;
+                Canvas.SetLeft(blueRectangle, pos_x);
+                Canvas.SetTop(blueRectangle, pos_y);
 
-            feld.Children.Add(rectangle);
+                feld.Children.Add(blueRectangle);
         }
+
     }
 }

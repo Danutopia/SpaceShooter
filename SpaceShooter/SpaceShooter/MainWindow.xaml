@@ -17,8 +17,8 @@
         <Image Margin="373,280,393,48" Source="images/playerShip.ico" Stretch="Fill" MouseDown="Image_MouseDown"/>
         <Border BorderBrush="Gray" BorderThickness="7" HorizontalAlignment="Left" Height="324" Margin="209,250,0,0" VerticalAlignment="Top" Width="586"/>
         <Label Content="Space Shooter V1.0" HorizontalAlignment="Left" Margin="294,67,0,0" VerticalAlignment="Top" Height="76" Width="398" FontSize="48" FontWeight="Bold" FontFamily="Impact"/>
-        <Label Content="Willkommen in" HorizontalAlignment="Left" Margin="406,10,0,0" VerticalAlignment="Top" Height="76" Width="176" FontSize="48" FontWeight="Bold" FontFamily="Gill Sans MT Ext Condensed Bold"/>
-        <Label Content="Zum Start auf das&#xD;&#xA;Raumschiff klicken" HorizontalAlignment="Left" Margin="820,326,0,0" VerticalAlignment="Top" Height="103" Width="176" FontWeight="Bold" FontFamily="Gill Sans MT Ext Condensed Bold" FontSize="36"/>
+        <Label Content="Willkommen in" HorizontalAlignment="Left" Margin="332,10,0,0" VerticalAlignment="Top" Height="76" Width="360" FontSize="36" FontWeight="Bold" FontFamily="Gill Sans MT Ext Condensed Bold"/>
+        <Label Content="Zum Start auf &#xD;&#xA;das Raumschiff &#xD;&#xA;klicken" HorizontalAlignment="Left" Margin="800,326,-114,0" VerticalAlignment="Top" Height="188" Width="337" FontWeight="Bold" FontFamily="Gill Sans MT Ext Condensed Bold" FontSize="24"/>
         <Button Content="Schließen" HorizontalAlignment="Left" Margin="10,536,0,0" VerticalAlignment="Top" Width="112" Height="38" Click="Button_Click_1" FontSize="18"/>
     </Grid>
 </Window>
