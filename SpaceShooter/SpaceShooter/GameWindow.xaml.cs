@@ -15,6 +15,8 @@ using System.Windows.Shapes;
 using SpaceShooter.Object.SpaceShip;
 using SpaceShooter.Object.SpaceStone;
 using SpaceShooter.Utils;
+using SpaceShooter.Handlers;
+using SpaceShooter.Exceptions;
 
 namespace SpaceShooter
 {
@@ -23,7 +25,7 @@ namespace SpaceShooter
     /// </summary>
     public partial class GameWindow : Window
     {
-        
+        ObjectCollisionHandler collisionHandler = new ObjectCollisionHandler();
         public GameWindow()
         {
             InitializeComponent();
@@ -65,6 +67,14 @@ namespace SpaceShooter
                     GameManager.direction = "right";
                     GameManager.playerContainer[0].pos_x += 10;
                     break;
+            }
+
+            try
+            {
+                collisionHandler.checkPlayerCollision(GameManager.playerContainer, GameManager.type1StoneContainer);
+            }catch (StoneHitException)
+            {
+                MessageBox.Show(":D");
             }
 
             MoveHandler.callMoveEvent(spielfeld);

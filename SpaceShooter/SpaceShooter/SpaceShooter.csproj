@@ -57,6 +57,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Handlers\ObjectCollisionHandler.cs" />
     <Compile Include="Handlers\MoveHandler.cs" />
     <Compile Include="Exceptions\StoneHitException.cs" />
     <Compile Include="GameWindow.xaml.cs">
@@ -74,7 +75,6 @@
     <Compile Include="Object\Projectile\NormalProjectile.cs" />
     <Compile Include="Object\Projectile\FireProjectile.cs" />
     <Compile Include="Object\SpaceShip\DefaultShip.cs" />
-    <Compile Include="Object\SpaceShip\EnemyShip.cs" />
     <Compile Include="Object\SpaceShip\PlayerShip.cs" />
     <Compile Include="Object\SpaceStone\DefaultStone.cs" />
     <Compile Include="Object\SpaceStone\Type3Stone.cs" />

@@ -36,7 +36,6 @@ namespace SpaceShooter.Utils
         public static List<NormalProjectile> normalProjectilesContainer = new List<NormalProjectile>();
         
         //SpaceShip Container
-        public static List<EnemyShip> enemyContainer = new List<EnemyShip>();
         public static List<PlayerShip> playerContainer = new List<PlayerShip>();
 
         //Stone Container

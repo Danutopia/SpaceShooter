@@ -27,15 +27,20 @@ namespace SpaceShooter.Object.SpaceShip
         public int pos_x { get; set; } = 100;
         public int pos_y { get; set; } = 100;
 
+        public Rotation rotation { get; set; } = Rotation.Rotate0;
+
         public void Draw(Canvas feld)
         {
                 Rectangle blueRectangle = new Rectangle();
                 blueRectangle.Height = object_height;
                 blueRectangle.Width = object_width;
-
+                
                 ImageBrush imgBrush = new ImageBrush();
-
-                imgBrush.ImageSource = new BitmapImage(new Uri("file://C:/Users/fabian/source/repos/SpaceShooter/SpaceShooter/SpaceShooter/images/playerShip.ico"));
+                BitmapImage bitmapImage = new BitmapImage();
+                bitmapImage.BeginInit();
+                bitmapImage.UriSource = new Uri("pack://application:,,,/images/playerShip.ico");
+                bitmapImage.EndInit();
+                imgBrush.ImageSource = bitmapImage;
                 blueRectangle.Fill = imgBrush;
 
                 Canvas.SetLeft(blueRectangle, pos_x);
@@ -43,6 +48,9 @@ namespace SpaceShooter.Object.SpaceShip
 
                 feld.Children.Add(blueRectangle);
         }
+
+
+
 
     }
 }

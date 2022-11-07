@@ -8,7 +8,7 @@ namespace SpaceShooter.Object.SpaceShip
 {
     public class DefaultShip
     {
-        public int default_width { get; set; } = 100;
-        public int default_height { get; set; } = 100;
+        public int default_width { get; set; } = 70;
+        public int default_height { get; set; } = 70;
     }
 }
