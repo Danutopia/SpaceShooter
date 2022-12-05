@@ -14,8 +14,34 @@ namespace SpaceShooter
 {
     class MoveHandler
     {
+        Random random = new Random();
+        public void stoneDrop()
+        {
+            List<Type1Stone> stoneContainer = GameManager.type1StoneContainer;
 
-        public static void callMoveEvent(Canvas feld)
+            for (int i = 0; i < stoneContainer.Count; i++)
+            {
+                Type1Stone targetStone = stoneContainer[i];
+
+                int downSprayLeft = targetStone.spray / 2;
+                int downSpray = targetStone.spray / 2;
+                
+
+                if(targetStone.sprayDirection == "up")
+                {
+                    targetStone.pos_x += downSprayLeft;
+                    targetStone.pos_y += downSpray;
+                }
+                else if(targetStone.sprayDirection == "down")
+                {
+                    targetStone.pos_x -= downSprayLeft;
+                    targetStone.pos_y -= downSpray;
+                }
+
+            }
+        }
+
+        public void callMoveEvent(Canvas feld)
         {
             clearCanvas(feld);
 
@@ -31,11 +57,7 @@ namespace SpaceShooter
         }
 
 
-        private static void checkCollision(Canvas feld)
-        {
-            
-        }
-        private static void clearCanvas(Canvas feld)
+        private void clearCanvas(Canvas feld)
         {
             feld.Children.Clear();
         }

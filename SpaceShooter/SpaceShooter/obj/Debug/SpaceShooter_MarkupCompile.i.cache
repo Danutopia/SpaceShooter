@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\Fabian\source\repos\GitHub\SpaceShooter\SpaceShooter\SpaceShooter\obj\Debug\
+C:\Users\fabian\source\repos\SpaceShooter\SpaceShooter\SpaceShooter\obj\Debug\
 SpaceShooter
 none
 false
 DEBUG;TRACE
-C:\Users\Fabian\source\repos\GitHub\SpaceShooter\SpaceShooter\SpaceShooter\App.xaml
+C:\Users\fabian\source\repos\SpaceShooter\SpaceShooter\SpaceShooter\App.xaml
 3-1048024172
 
-33-1017533236
+26-1708782166
 13-1505183044
 GameWindow.xaml;MainWindow.xaml;StartUPWindow.xaml;
 
-False
+True
 

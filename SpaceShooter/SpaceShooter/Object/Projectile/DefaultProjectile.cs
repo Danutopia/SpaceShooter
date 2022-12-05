@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SpaceShooter.Object.Projectile
 {
-    public class DefaultProjectile
+    public interface DefaultProjectile
     {
     }
 }

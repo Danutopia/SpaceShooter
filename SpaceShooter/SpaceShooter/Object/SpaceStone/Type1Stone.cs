@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Controls;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
@@ -13,28 +9,61 @@ namespace SpaceShooter.Object.SpaceStone
 {
     public class Type1Stone : DefaultStone, IDrawController
     {
+
+        Random random = new Random();
         public Type1Stone()
         {
-            object_height = default_height;
-            object_width = default_width;
-
             pos_x = default_pos_x;
             pos_y = default_pos_y;
         }
-        public int object_width { get; set; }
-        public int object_height { get; set; }
+
         public int pos_x { get; set; }
         public int pos_y { get; set; }
+
+        public int spray { get; set; }
+        public String sprayDirection { get; set; }
+
+        public void genererateSpray()
+        {
+            spray = random.Next(50, 150);
+
+            switch (random.Next(0,5))
+            {
+                case 0:
+                    sprayDirection = "up";
+                    break;
+                case 1:
+                    sprayDirection = "down";
+                    break;
+                case 2:
+                    sprayDirection = "downLeft";
+                    break;
+                case 3:
+                    sprayDirection = "downRight";
+                    break;
+                case 4:
+                    sprayDirection = "upLeft";
+                    break;
+                case 5:
+                    sprayDirection = "upRight";
+                    break;
+
+            }
+        }
 
         public void Draw(Canvas feld)
         {
             Rectangle rectangle = new Rectangle();
-            rectangle.Height = object_height;
-            rectangle.Width = object_width;
+            rectangle.Height = default_height;
+            rectangle.Width = default_width;
 
-            SolidColorBrush brush = new SolidColorBrush();
-            brush.Color = Color.FromRgb(244, 255, 90);
-            rectangle.Fill = brush;
+            ImageBrush imgBrush = new ImageBrush();
+            BitmapImage bitmapImage = new BitmapImage();
+            bitmapImage.BeginInit();
+            bitmapImage.UriSource = new Uri("pack://application:,,,/images/picwish.ico");
+            bitmapImage.EndInit();
+            imgBrush.ImageSource = bitmapImage;
+            rectangle.Fill = imgBrush;
 
             Canvas.SetLeft(rectangle, pos_x);
             Canvas.SetTop(rectangle, pos_y);

@@ -1,11 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 using SpaceShooter.Object.SpaceShip;
-using SpaceShooter.Object.PowerUP;
 using SpaceShooter.Object.Projectile;
 using SpaceShooter.Object.SpaceStone;
 using SpaceShooter.Object.Star;
@@ -23,16 +19,6 @@ namespace SpaceShooter.Utils
 
         public static String direction { get; set; } = "";
 
-        //PowerUP Container
-        public static List<HealPowerUP> healPowerUPContainer = new List<HealPowerUP>();
-        public static List<ShieldPowerUP> shieldPowerUPContainer = new List<ShieldPowerUP>();
-        public static List<SpeedPowerUP> speedPowerUPContainer = new List<SpeedPowerUP>();
-        public static List<StrengthPowerUP> strengthPowerUPContainer = new List<StrengthPowerUP>();
-
-        //Projectile Container
-        public static List<BurstProjectile> burstProjectilesContainer = new List<BurstProjectile>();
-        public static List<FireProjectile> fireProjectilesContainer = new List<FireProjectile>();
-        public static List<LaserProjectile> laserProjectilesContainer = new List<LaserProjectile>();
         public static List<NormalProjectile> normalProjectilesContainer = new List<NormalProjectile>();
         
         //SpaceShip Container
@@ -41,11 +27,36 @@ namespace SpaceShooter.Utils
         //Stone Container
         public static List<Type1Stone> type1StoneContainer = new List<Type1Stone>();
         public static List<Type2Stone> type2StoneContainer = new List<Type2Stone>();
-        public static List<Type3Stone> type3StoneContainer = new List<Type3Stone>();
 
         //Star Container
         public static List<NormalStar> normalStarContainer = new List<NormalStar>();
         public static List<SuperStar> superStarContainer = new List<SuperStar>();
 
+
+        //
+        public static List<int> possibleXpos = new List<int>();
+        public static List<int> possibleYpos = new List<int>();
+
+        private static Boolean possiblePosGenerated = false;
+        public static void generatePossiblePosition()
+        {
+            if (!possiblePosGenerated)
+            {
+                possiblePosGenerated = true;
+
+                for (int i = 10; i <= 1090;)
+                {
+
+                    possibleXpos.Add(i);
+                    i += 10;
+                }
+
+                for (int i = 10; i <= 560;)
+                {
+                    possibleYpos.Add(i);
+                    i += 10;
+                }
+            }
+        }
     }
 }

@@ -38,6 +38,7 @@ namespace SpaceShooter.Object.SpaceShip
                 ImageBrush imgBrush = new ImageBrush();
                 BitmapImage bitmapImage = new BitmapImage();
                 bitmapImage.BeginInit();
+                bitmapImage.Rotation = this.rotation;
                 bitmapImage.UriSource = new Uri("pack://application:,,,/images/playerShip.ico");
                 bitmapImage.EndInit();
                 imgBrush.ImageSource = bitmapImage;

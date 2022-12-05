@@ -57,6 +57,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Exceptions\StoneHitBorderException.cs" />
     <Compile Include="Handlers\ObjectCollisionHandler.cs" />
     <Compile Include="Handlers\MoveHandler.cs" />
     <Compile Include="Exceptions\StoneHitException.cs" />
@@ -64,20 +65,12 @@
       <DependentUpon>GameWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="Interfaces\IDrawController.cs" />
-    <Compile Include="Object\PowerUP\DefaultPowerUP.cs" />
-    <Compile Include="Object\PowerUP\HealPowerUP.cs" />
-    <Compile Include="Object\PowerUP\ShieldPowerUP.cs" />
-    <Compile Include="Object\PowerUP\SpeedPowerUP.cs" />
-    <Compile Include="Object\PowerUP\StrengthPowerUP.cs" />
-    <Compile Include="Object\Projectile\BurstProjectile.cs" />
+    <Compile Include="Interfaces\IMovementController.cs" />
     <Compile Include="Object\Projectile\DefaultProjectile.cs" />
-    <Compile Include="Object\Projectile\LaserProjectile.cs" />
     <Compile Include="Object\Projectile\NormalProjectile.cs" />
-    <Compile Include="Object\Projectile\FireProjectile.cs" />
     <Compile Include="Object\SpaceShip\DefaultShip.cs" />
     <Compile Include="Object\SpaceShip\PlayerShip.cs" />
     <Compile Include="Object\SpaceStone\DefaultStone.cs" />
-    <Compile Include="Object\SpaceStone\Type3Stone.cs" />
     <Compile Include="Object\SpaceStone\Type1Stone.cs" />
     <Compile Include="Object\SpaceStone\Type2Stone.cs" />
     <Compile Include="Object\Star\DefaultStar.cs" />
@@ -145,6 +138,9 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="nottingham-university-forscher-wissenschaftler-alien-ausserirdische-zivilisation-weltall-milchstrasse.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\picwish.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

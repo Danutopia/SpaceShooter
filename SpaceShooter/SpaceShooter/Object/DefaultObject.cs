@@ -16,14 +16,6 @@ namespace SpaceShooter.Object
             }
         }
 
-        public PowerUP.DefaultPowerUP DefaultPowerUP
-        {
-            get => default;
-            set
-            {
-            }
-        }
-
         public Star.DefaultStar DefaultStar
         {
             get => default;
